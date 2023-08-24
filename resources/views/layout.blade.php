@@ -7,7 +7,7 @@
   <title>Laravel demo</title>
 </head>
 <body>
-  <h1>Laravel</h1>
+  <h1>Laravel - DEMO</h1>
   
   {{-- VIEW OUTPUT --}}
   @yield('content')

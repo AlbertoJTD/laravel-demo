@@ -1,4 +1,8 @@
-<h1>Find by ID: {{ $listing['id'] }}</h1>
+@extends('layout')
 
-<h2>{{ $listing['title'] }}</h2>
-<p>{{ $listing['description'] }}</p>
+@section('content')
+  <h1>Find by ID: {{ $listing['id'] }}</h1>
+
+  <h2>{{ $listing['title'] }}</h2>
+  <p>{{ $listing['description'] }}</p>
+@endsection
