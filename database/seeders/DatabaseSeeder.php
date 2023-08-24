@@ -16,31 +16,33 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory(5)->create();
 
         // Seed date for Listing model
-        Listing::create([
-            'title' => 'Laravel Senior Developer',
-            'tags' => 'laravel, javascript',
-            'company' => 'Acme Corp',
-            'location' => 'Boston. MA',
-            'email' => 'email1@email.com',
-            'website' => 'https://ww.acme.com',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Velit totam a officiis cumque et fugiat ducimus laboriosam aliquam, alias
-            enim! Aut temporibus soluta pariatur eaque rerum illo deserunt distinctio
-            voluptatem.'
-        ]);
+        Listing::factory(6)->create();
 
-        Listing::create([
-            'title' => 'Full-Stack Engineer',
-            'tags' => 'laravel, backend, api',
-            'company' => 'Stark Industries',
-            'location' => 'New York, NY',
-            'email' => 'email2@email.com',
-            'website' => 'https://ww.starkIndustries.com',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Velit totam a officiis cumque et fugiat ducimus laboriosam aliquam, alias
-            enim! Aut temporibus soluta pariatur eaque rerum illo deserunt distinctio
-            voluptatem.'
-        ]);
+        // Listing::create([
+        //     'title' => 'Laravel Senior Developer',
+        //     'tags' => 'laravel, javascript',
+        //     'company' => 'Acme Corp',
+        //     'location' => 'Boston. MA',
+        //     'email' => 'email1@email.com',
+        //     'website' => 'https://ww.acme.com',
+        //     'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        //     Velit totam a officiis cumque et fugiat ducimus laboriosam aliquam, alias
+        //     enim! Aut temporibus soluta pariatur eaque rerum illo deserunt distinctio
+        //     voluptatem.'
+        // ]);
+
+        // Listing::create([
+        //     'title' => 'Full-Stack Engineer',
+        //     'tags' => 'laravel, backend, api',
+        //     'company' => 'Stark Industries',
+        //     'location' => 'New York, NY',
+        //     'email' => 'email2@email.com',
+        //     'website' => 'https://ww.starkIndustries.com',
+        //     'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        //     Velit totam a officiis cumque et fugiat ducimus laboriosam aliquam, alias
+        //     enim! Aut temporibus soluta pariatur eaque rerum illo deserunt distinctio
+        //     voluptatem.'
+        // ]);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
