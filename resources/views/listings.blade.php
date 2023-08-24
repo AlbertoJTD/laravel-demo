@@ -17,6 +17,6 @@
 @endif
 
 @foreach ($listings as $listing)
-  <h2>{{ $listing['title'] }}</h2>
+  <a href="/find/{{ $listing['id'] }}">{{ $listing['title'] }} </a>
   <p>{{ $listing['description'] }}</p>
 @endforeach
