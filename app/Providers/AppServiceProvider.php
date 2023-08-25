@@ -19,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // This line accepts a mass assignment and it is no longer required to set the fillable fields.
+        // Model::unguard();
     }
 }
