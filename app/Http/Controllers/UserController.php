@@ -38,4 +38,23 @@ class UserController extends Controller
 
         return redirect('/')->with('message', 'Session closed');
     }
+
+    public function login() {
+        return view('users.login');
+    }
+
+    public function authenticate(Request $request) {
+        $formsFields = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => 'required',
+        ]);
+
+        if (auth()->attempt($formsFields)) {
+            $request->session()->regenerate();
+            
+            return redirect('/')->with('message', 'Welcome back!');
+        }
+
+        return back()->withErrors(['email' => 'Invalid credentials'])->onlyInput('email');
+    }
 }
