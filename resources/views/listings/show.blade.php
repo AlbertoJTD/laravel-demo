@@ -38,18 +38,20 @@
     </x-card>
 
     <x-card class="mt-4 p-2 flex space-x-6">
-      <a href="/listings/{{ $listing->id }}/edit">
-        <i class="fa fa-pencil" aria-hidden="true"></i>Edit
-      </a>
+      @if (auth()->id() == $listing->user_id)
+        <a href="/listings/{{ $listing->id }}/edit">
+          <i class="fa fa-pencil" aria-hidden="true"></i>Edit
+        </a>
 
-      <form method="POST" action="/listings/{{$listing->id}}">
-        @csrf
-        @method('DELETE')
+        <form method="POST" action="/listings/{{$listing->id}}">
+          @csrf
+          @method('DELETE')
 
-        <button class="text-red-500">
-          <i class="fa fa-trash" aria-hidden="true"></i> Delete
-        </button>
-      </form>
+          <button class="text-red-500">
+            <i class="fa fa-trash" aria-hidden="true"></i> Delete
+          </button>
+        </form>
+      @endif
     </x-card>
   </div>
 </x-layout>
