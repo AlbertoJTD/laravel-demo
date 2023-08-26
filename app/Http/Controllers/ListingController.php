@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -77,5 +78,9 @@ class ListingController extends Controller
         $listing->delete();
 
         return redirect('/')->with('message', 'Listing deleted successfully!');
+    }
+
+    public function manage() {
+        return view('listings.manage', ['listings' => auth()->user()->listings]);
     }
 }

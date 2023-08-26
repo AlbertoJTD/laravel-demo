@@ -34,7 +34,7 @@
             <span class="font-bold uppercase">Hello, {{ auth()->user()->name }}</span>
           </li>
           <li>
-            <a href="/listings/manager" class="hover:text-laravel"><i class="fa-solid fa-gear"></i> Manage listings</a>
+            <a href="/listings/manage" class="hover:text-laravel"><i class="fa-solid fa-gear"></i> Manage listings</a>
           </li>
           <li>
             <form method="POST" action="/logout" class="inline">
