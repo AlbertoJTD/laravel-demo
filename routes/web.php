@@ -16,7 +16,8 @@ use App\Http\Controllers\ListingController;
 */
 
 Route::get('/', [ListingController::class, 'index']);
-Route::get('/listing/{listing}', [ListingController::class, 'show']);
+// Route::get('/listing/{listing}', [ListingController::class, 'show']);
+Route::resource('listings', ListingController::class)->only(['show']);
 // Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
 // Route::post('/listings', [ListingController::class, 'store'])->middleware('auth');
 // Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
